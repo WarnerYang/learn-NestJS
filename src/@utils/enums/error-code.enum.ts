@@ -1,0 +1,29 @@
+export enum ErrorCode {
+  DATA_WRITE_FAILED = 2001,              // 数据写入失败
+  DATA_UPDATE_FAILED = 2002,             // 数据更新失败
+  DATA_DELETE_FAILED = 2003,             // 数据删除失败
+  DATA_QUERY_FAILED = 2004,              // 数据查询失败
+  ACCOUNT_ERROR = 2005,                  // 账号错误
+  PASSWORD_ERROR = 2006,                 // 密码错误
+  ACCOUNT_OR_PASSWORD_ERROR = 2007,      // 账号或密码错误
+  VERIFICATION_CODE_ERROR = 2008,        // 验证码错误
+  ILLEGAL_LOGIN = 2009,                  // 非法登录
+  TOKEN_INVALID = 2010,                  // 获取 token 错误，token无效
+  PARAMETER_INVALID = 2011,              // 不合法的参数
+  REQUEST_INVALID = 2012,                // 不合法的请求格式
+  NEED_GET = 2013,                       // 需要GET
+  NEED_POST = 2014,                      // 需要POST
+  PARAMETER_ERROR = 2015,                // 参数错误
+  DATE_FORMAT_ERROR = 2016,              // 日期格式错误
+  PARAMETER_EMPTY = 2017,                // 部分参数为空
+  UPLOAD_FAILED = 2018,                  // 上传失败
+  REQUEST_FAILED = 2019,                 // 请求失败
+  VERIFICATION_FAILED = 2020,            // 验证失败
+  ACCESS_TOKEN_INVALID = 2021,           // access_token 无效
+  URL_ERROR = 2022,                      // 不合法url地址
+  PASSWORD_FORMAT_ERROR = 2023,          // 密码不合法
+  FIELD_FORMAT_ERROR = 2024,             // 字段格式有误
+  TOKEN_EXPIRED = 2025,                  // token 或 access_token 过期
+  SYSTEM_ERROR = 3001,                   // 系统错误
+  SYSTEM_BUSY = 3000,                    // 系统繁忙
+}

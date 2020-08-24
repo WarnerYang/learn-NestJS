@@ -6,16 +6,9 @@ import { Injectable } from '@nestjs/common';
 export class ConfigService {
   static instance: any;
   private envConfig: object;
-  private constructor() { }
 
-  /**
-   * 获取唯一实例
-   */
-  static getInstance(): ConfigService {
-    if (!this.instance) {
-      this.instance = new ConfigService;
-    }
-    return this.instance;
+  constructor() {
+    this.envConfig = dotenv.parse(fs.readFileSync('.env'));
   }
 
   /**
@@ -24,8 +17,6 @@ export class ConfigService {
    * @param key 配置 key
    */
   get(key: string): any {
-    this.envConfig = dotenv.parse(fs.readFileSync('.env'));
     return process.env[key] || this.envConfig[key];
   }
-
 }

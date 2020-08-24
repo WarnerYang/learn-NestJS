@@ -10,7 +10,7 @@ async function bootstrap() {
   app.useGlobalFilters(new AllExceptionsFilter());
   // 注册全局类验证器
   app.useGlobalPipes(new ValidationPipe());
-  const config = ConfigService.getInstance();
+  const config = new ConfigService;
   const APPLICATION_PORT = config.get('APPLICATION_PORT');
   await app.listen(APPLICATION_PORT);
   Logger.log(`Your application is runing on http://localhost:${APPLICATION_PORT}`);

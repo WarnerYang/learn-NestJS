@@ -1,6 +1,7 @@
 import { PureController } from './controllers/pure';
 import { RestController } from './controllers/rest';
-import { ConfigService } from './services/config';
+import { ConfigService } from './config/config.service';
+import { ConfigModule } from './config/config.module';
 import { ValidationPipe } from './validation/validate.pipe';
 import { BusinessException } from './exception/business.exception';
 import { ErrorCode } from './enums/error-code.enum';
@@ -12,4 +13,5 @@ export {
   ValidationPipe,
   BusinessException,
   ErrorCode,
+  ConfigModule,
 };

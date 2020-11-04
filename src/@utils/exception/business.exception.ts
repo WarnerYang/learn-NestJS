@@ -12,8 +12,8 @@ import { ErrorCode } from '../enums/error-code.enum';
  *
  */
 export class BusinessException extends HttpException {
-    constructor(errcode: ErrorCode, errmsg?: string) {
-        errmsg = errmsg ? errmsg : ErrorCode[errcode];
-        super({ errcode, errmsg }, HttpStatus.OK);
-    }
+  constructor(errcode: ErrorCode, errmsg?: string) {
+    errmsg = errmsg ? errmsg : ErrorCode[errcode];
+    super({ errcode, errmsg }, HttpStatus.OK);
+  }
 }

@@ -40,29 +40,29 @@ class ChildProcess {
     getInstance.consoleLog('unhandledRejection', e);
     if (e.original) {
       switch (e.original.code) {
-        case 'PROTOCOL_CONNECTION_LOST':
-          process.exit(500);
-          break;
-        case 'ER_SERVER_SHUTDOWN':
-          process.exit(500);
-          break;
-        case 'ECONNREFUSED':
-          process.exit(500);
-          break;
-        case 'ECONNRESET':
-          process.exit(500);
-          break;
-        default:
-          process.exit(0);
+      case 'PROTOCOL_CONNECTION_LOST':
+        process.exit(500);
+        break;
+      case 'ER_SERVER_SHUTDOWN':
+        process.exit(500);
+        break;
+      case 'ECONNREFUSED':
+        process.exit(500);
+        break;
+      case 'ECONNRESET':
+        process.exit(500);
+        break;
+      default:
+        process.exit(0);
       }
     } else if (e.name) {
       switch (e.name) {
-        case 'MongoNetworkError':
-          process.exit(500);
-          break;
-        case 'MongooseServerSelectionError':
-          process.exit(500);
-          break;
+      case 'MongoNetworkError':
+        process.exit(500);
+        break;
+      case 'MongooseServerSelectionError':
+        process.exit(500);
+        break;
       }
     } else {
       process.exit(0);

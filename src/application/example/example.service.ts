@@ -8,7 +8,7 @@ export class ExampleService {
   constructor(
     private readonly config: ConfigService,
   ) {
-    this.APPLICATION_PORT = this.config.get('APPLICATION_PORT')
+    this.APPLICATION_PORT = this.config.get('APPLICATION_PORT');
   }
 
   index() {

@@ -12,5 +12,5 @@ export class ChildProcessController extends PureController {
   index() {
     return this.service.createChildProcess();
   }
-  
+
 }

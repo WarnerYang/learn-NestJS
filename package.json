@@ -29,6 +29,7 @@
     "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
     "express-http-context": "^1.2.4",
+    "redis": "^3.0.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4",
